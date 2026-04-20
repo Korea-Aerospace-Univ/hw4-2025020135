@@ -11,7 +11,7 @@ int main(void) {
     int count_num = 0, max_num = 0;
     
     for (int i = 0; i < N; i++) {
-        ch = getchar();
+        scanf("%c",&ch);
         
         if (ch >= 'a' && ch <= 'z') {
             count_small++;
