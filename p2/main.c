@@ -4,13 +4,14 @@ int main(void) {
     int N;
     char ch;
     
-    scanf("%d", &N); 
+    scanf("%d", &N);
+    getchar();
     
     int count_small = 0, max_small = 0;
     int count_num = 0, max_num = 0;
     
     for (int i = 0; i < N; i++) {
-        scanf(" %c", &ch);
+        ch = getchar();
         
         if (ch >= 'a' && ch <= 'z') {
             count_small++;
@@ -24,6 +25,12 @@ int main(void) {
             count_small = 0;
             if (count_num > max_num)
                 max_num = count_num;
+        }
+        
+        else {
+            count_small = 0;
+            count_num = 0;
+            
         }
     }
     
